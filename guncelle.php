@@ -53,13 +53,6 @@
 	else
 		echo "Lütfen geçerli değerler giriniz.";
 
-
-		//mysqli_query($baglanti,"UPDATE ogrenciler SET `ad`= 'Meral'
-		//WHERE FirstName='Peter' AND LastName='Griffin'");
- 
-		//mysqli_close($baglanti);	// Bağlantıyı sonlandırmak için bu komutu kullanırız.
-
-
 	function sayiControl($gelenSayi){
 		$flag = true;	// flag == kullanabilirlik kontrolu
 		$gelenSayi = trim($gelenSayi);
