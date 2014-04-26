@@ -88,55 +88,6 @@ Aldığı Not:
 
 </center>
 
-
-
-<?php 
-/*
-$baglanti = mysqli_connect("localhost","root","3103709","OgrenciBilgiSistemi");
- Baglantiyi Kontrol Et
-if (mysqli_connect_errno($baglanti))
-{
-echo "MySQLe baglanamadi: " . mysqli_connect_error();
-}
-
-if(isset($_POST["ad"]) && isset($_POST["soyad"]) && isset($_POST["numara"]) && isset($_POST["sinif"]) && isset($_POST["not"])){	
-	$ad = $_POST["ad"];
-	$ad = trim($ad);
-    $ad = stripslashes($ad); 
-	
-
-	$soyad = $_POST["soyad"];
-	$soyad = trim($soyad);
-    $soyad = stripslashes($soyad);
-	
-
-	$numara = $_POST["numara"];
-	$numara = trim($numara);
-    $numara = stripslashes($numara);
-	
-
-	$sinif = $_POST["sinif"];
-	$sinif = trim($sinif);
-    $sinif = stripslashes($sinif);
-	
-
-	$not = $_POST["not"];
-	$not = trim($not);
-    $not = stripslashes($not);
-	if (empty($ad) || empty($soyad) || empty($numara) || empty($sinif) || empty($not)) {
-		echo "Lütfen eksik bilgi girmeyiniz.";
-	}
-	else{
-	echo "$ad <br>";echo "$soyad <br>";echo "$numara <br>";echo "$sinif <br>";echo "$not <br>";
-	mysqli_query($baglanti,"INSERT INTO ogrenciler(numara, ad, soyad, sinif, `not`) VALUES ($numara, '$ad', '$soyad', '$sinif', $not);")or die("Hata: kayıt işlemi gerçekleşemedi.");
-
-	}
-}
-
-else{
-	echo "Lutfen eksik bilgi girmeyiniz.";
-}
-*/
  ?>
 </body>
 </html>
