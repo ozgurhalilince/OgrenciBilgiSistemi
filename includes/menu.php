@@ -1,6 +1,5 @@
 <html>
 <head>
-<title>Dikey Menü Yapimi</title>
 <style type="text/css">
 a.menu:link {
 font-size: 14px;

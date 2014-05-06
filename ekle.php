@@ -1,30 +1,6 @@
-<html>
-<body>
-
-<meta charset="utf-8">
-<?php include 'includes/menu.php' ?>
-<CENTER>
-<form action="#" method="POST" name="testform">
-<input type="hidden" name="count" value="3"></input>
-Öğrenci Ad:
-	<input type="text" name="ad"></input><br><br>
-Öğrenci Soyadı:
-	<input type="text" name="soyad"></input><br><br>
-Öğrenci Numarası:
-	<input type="text" name="numara"></input><br><br>
-Öğrenci Sınıfı:
-	<input type="radio" name="sinif" value="1.sinif">1. Sinif</input>
-	<input type="radio" name="sinif" value="2.sinif">2. Sinif</input>
-	<input type="radio" name="sinif" value="3.sinif">3. Sinif</input>
-	<input type="radio" name="sinif" value="4.sinif">4. Sinif</input><br><br>
-Aldığı Not:
-	<input type="text" name="not"></input><br><br>
-	<input type="submit" value="Tamam"></input>
-	<input type="reset" value="Temizle"></input>
-
-	</center>
-
 <?php 
+	include 'includes/control.php';
+
 	$ad = $_POST['ad'];
 	$soyad = $_POST['soyad'];
 	$numara = $_POST['numara'];
@@ -56,38 +32,12 @@ Aldığı Not:
 			echo " <h4> Lutfen notu 0 - 100 arasında bir değer giriniz. </h4>";
 	}
 
-	else
-		echo " <h4> Lutfen geçerli değerler giriniz. </h4>";
+	else{
+		if(isset($ad) && isset($soyad) && isset($numara) && isset($sinif) && isset($not))
+			echo " <h4> Lutfen geçerli değerler giriniz. </h4>";
+	}
 	
 
-
-	function kelimeControl($gelenKelime){
-		$flag = true; 	// flag == kullanabilirlik kontrolu
-		$gelenKelime = trim($gelenKelime);
-   	  	$gelenKelime = stripslashes($gelenKelime); 
-
-   	  	if ($gelenKelime == "") 
-   	  		$flag = false;	//Eğer gelen kelime boş ise kullanılamaz.
-   	  	
-   	  	return $flag;
-	}
-
-	function sayiControl($gelenSayi){
-		$flag = true;	// flag == kullanabilirlik kontrolu
-		$gelenSayi = trim($gelenSayi);
-   	  	$gelenSayi = stripslashes($gelenSayi);
-
-   	  	if($gelenSayi == "") 	//Eğer gelen sayi boş ise kullanılamaz.
-   	  		$flag = false;
-   	  	else if (!is_numeric($gelenSayi))	//Gelen sayi harf içeriyorsa kullanılamaz.
-   	  		$flag = false;
-
-   	  	return $flag;
-	}
- ?>
-
-</center>
+	include 'includes/ekle.html';	
 
  ?>
-</body>
-</html>

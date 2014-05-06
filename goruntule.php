@@ -1,21 +1,16 @@
 <html>
 <body>
 <meta charset="utf8">
-<?php include 'includes/menu.php' ?>
+<?php 
+include 'includes/menu.php'; 
+include 'includes/db.php';
 
-
-<?php
-
-$baglanti = mysqli_connect("localhost","root","","OgrenciBilgiSistemi");		//MySQL'e bağlanır.
-
-//Baglantiyi Kontrol Et
-if (mysqli_connect_errno($baglanti)){
-echo "MySQLe baglanamadi: " . mysqli_connect_error();	// MySQL'e bağlanıp bağlanmadığını kontrol ederiz
-}
+$baglanti = baglan();		//MySQL'e bağlanır.
 
 $sonuclar = mysqli_query($baglanti,"SELECT * FROM ogrenciler ORDER BY `not` DESC");	// ORDER BY `not` DESC komutu notları büyükten küçüğe sıralar
 
 ?>
+
 <center>
 <table> <td> 
 	<?php  	

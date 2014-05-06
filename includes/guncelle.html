@@ -1,0 +1,26 @@
+<html>
+<body>
+<meta charset="utf8">
+<center>
+	<?php include 'includes/menu.php'; 
+	?>
+<form action ="#" method="POST" name="guncelleFormu">
+	<br><br>
+	<h4>Guncellenecek kişinin numarasını giriniz:</h4>
+	<input type="text" name="girilenNumara"></input><br>
+
+	<h4>Guncellenecek alanı seçiniz:</h4>
+	<input type="radio" name="guncellenecekAlan" value="ad">Ad</input>
+	<input type="radio" name="guncellenecekAlan" value="soyad">Soyad</input>
+	<input type="radio" name="guncellenecekAlan" value="sinif">Sınıf</input>
+	<input type="radio" name="guncellenecekAlan" value="numara">Numara</input>
+	<input type="radio" name="guncellenecekAlan" value="not">Not</input><br><br>
+
+	<h4>Yeni değeri giriniz: </h4>
+	<input type="text" name="yeniDeger"></input>
+	<input type="submit" value="Tamam"></input>
+</form>
+
+</center>
+</body>
+</html>
